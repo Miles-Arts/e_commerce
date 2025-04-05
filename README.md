@@ -52,4 +52,4 @@ Este proyecto está siendo desarrollado como parte de un reto de aprendizaje. Pr
 ## Contacto
 [Información de contacto]
 
-![Vende - Fácil](Leonardo_Phoenix_10_Create_a_logo_for_an_ecommerce_platform_ca_1.jpg)
+<img src="Vende-Facil.jpg" width="20%" alt="Logo Vende Fácil">
