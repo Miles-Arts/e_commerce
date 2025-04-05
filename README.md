@@ -50,6 +50,6 @@ Este proyecto está siendo desarrollado como parte de un reto de aprendizaje. Pr
 [Pendiente]
 
 ## Contacto
-[Información de contacto]
+[[Información de contacto](https://www.linkedin.com/in/milton-figueredo-miles-arts/)]
 
 <img src="img/Agro_Connect.jpg" width="20%" alt="Logo Vende Fácil">
