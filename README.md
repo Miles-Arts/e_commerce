@@ -52,4 +52,4 @@ Este proyecto está siendo desarrollado como parte de un reto de aprendizaje. Pr
 ## Contacto
 [Información de contacto]
 
-<img src="img/Vende_Facil.jpg" width="20%" alt="Logo Vende Fácil">
+<img src="img/Agro_Connect.jpg" width="20%" alt="Logo Vende Fácil">
