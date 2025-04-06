@@ -1,4 +1,8 @@
-# e_commerce
+# e_commerce #trycatch
+# Desafio de Try_Catch_TV
+# Crear un e-commerce desde cero en una semana!. 
+
+# --- Proyecto ---
 # Agro Connect - E-commerce de Productos Agrícolas
 
 ## Descripción del Proyecto
@@ -28,6 +32,9 @@ Agro Connect es una plataforma de e-commerce diseñada para conectar granjas agr
 ### Otras Herramientas
 - **Git & GitHub**: Control de versiones y colaboración
 - **Excalidraw/Draw.io**: Diseño de mockups y diagramas
+- **Balsamiq**: Diseño de mockups y prototipos
+- **PostgreSQL**: Creación de DB
+- **DBeaver**: Gestor de DB
 
 ## Características Principales
 - Catálogo de productos agrícolas organizados por categorías
@@ -53,3 +60,5 @@ Este proyecto está siendo desarrollado como parte de un reto de aprendizaje. Pr
 [[Información de contacto](https://www.linkedin.com/in/milton-figueredo-miles-arts/)]
 
 <img src="img/Agro_Connect.jpg" width="20%" alt="Logo Vende Fácil">
+
+#trycatch #backend #HagaseUnEcommeceChallenge #ecommerce #desarrolloweb #tecnologia #proyectos #python
