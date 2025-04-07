@@ -15,9 +15,7 @@ conexion = psycopg2.connect(
 # Crear cursor
 cursor = conexion.cursor()
 
-
 #Crear sentencia SQL
-
 sql='INSERT INTO id_personas(documento,nombres,apellidos,correo,metodo_de_pago,fecha_nacimiento,direccion,celular) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)'
 
 #Solicitud de datos al usuario
@@ -38,7 +36,6 @@ datos=(documento,nombres,apellidos,correo,metodo_pago,fecha_nacimiento,direccion
 cursor.execute(sql,datos)
 
 #guardar registro- datos
-
 conexion.commit()
 
 #mensaje insert datos
