@@ -42,3 +42,4 @@ print(df)
 # Cerrar cursor y conexión
 cursor.close()
 conexion.close()
+
