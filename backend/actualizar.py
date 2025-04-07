@@ -16,7 +16,6 @@ conexion = psycopg2.connect(
 cursor = conexion.cursor()
 
 #crear sentencia sql
-
 sql='UPDATE id_personas SET documento=%s,nombres=%s,apellidos=%s,correo=%s,metodo_de_pago=%s,fecha_nacimiento=%s,direccion=%s,celular=%s WHERE id_persona=%s'
 
 #consulta de datos usuario
