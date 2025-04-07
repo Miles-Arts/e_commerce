@@ -16,20 +16,16 @@ conexion = psycopg2.connect(
 cursor = conexion.cursor()
 
 #crear sentencia sql
-sql='UPDATE productos SET nombre_producto=%s,categoria_producto=%s,caracteristicas_producto=%s,tipo_producto=%s,tamano_producto=%s,precio_producto=%s,mes_del_producto=%s WHERE id_producto=%s'
+sql='UPDATE venta_producto SET id_vendedor=%s,id_venta=%s,id_compra=%s,precio_producto=%s WHERE id_venta=%s'
 
 #consulta de datos usuario
-id_producto=input("Ingrese ID del producto a editar: ").strip()
-nombre_producto=input("Ingrese nombre producto: ").title()
-categoria_producto=input("Ingrese categoría producto: ").title()
-caracteristicas_producto=input("Ingrese caracterisrticas producto: ")
-tipo_producto=input("Ingrese tipo producto (seco - liquido - granos): ")
-tamano_producto=input("Ingrese tamaño en número- dimensiones - peso - litros : ")
-precio_producto=input("Ingrese precio del producto: ")
-mes_del_producto=input("Ingrese mes de la cosecha: ").title()
+id_vendedor=input("Ingrese ID vendedor: ").strip()
+id_venta=input("Ingrese ID venta: ").strip()
+id_compra=input("Ingrese ID compra: ").strip()
+precio_producto=input("Ingrese precio producto: ").strip()
 
 #recoleccion de datos
-datos=(nombre_producto,categoria_producto,caracteristicas_producto,tipo_producto,tamano_producto,precio_producto,mes_del_producto,id_producto)
+datos=(id_vendedor,id_venta,id_compra,precio_producto)
 
 #utilizar execute
 cursor.execute(sql,datos)
