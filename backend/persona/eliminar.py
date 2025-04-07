@@ -28,7 +28,7 @@ cursor.execute(sql,id_persona)
 conexion.commit()
 
 #conteo registro  eliminado
-registro_eliminado=cursor.rowcount()
+registro_eliminado=cursor.rowcount
 
 #mensaje a usuario
 print(f"Registros eliminado {registro_eliminado}")
