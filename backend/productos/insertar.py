@@ -16,21 +16,20 @@ conexion = psycopg2.connect(
 cursor = conexion.cursor()
 
 #Crear sentencia SQL
-sql='INSERT INTO id_personas(documento,nombres,apellidos,correo,metodo_de_pago,fecha_nacimiento,direccion,celular) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)'
+sql='INSERT INTO productos(nombre_producto,categoria_producto,caracteristicas_producto,tipo_producto,tamano_producto,precio_producto,mes_del_producto) VALUES(%s,%s,%s,%s,%s,%s,%s)'
 
 #Solicitud de datos al usuario
-documento=input("Ingrese número de documento: ")
-nombres=input("Ingrese su nombre: ").title()
-apellidos=input("Ingrese apellidos: ").title()
-correo=input("Ingrese el correo: ")
-print("Ingrese 1 o 0")
-metodo_pago=input("Ingrese el método de pago: ")
-fecha_nacimiento=input("Ingrese su fecha de nacimiento: ")
-direccion=input("Ingrese su dirección: ")
-celular=input("Ingrese su número de celular: ")
+#documento=input("Ingrese número de documento: ")
+nombre_producto=input("Ingrese nombre producto: ").title()
+categoria_producto=input("Ingrese categoría producto: ").title()
+caracteristicas_producto=input("Ingrese caracterisrticas producto: ")
+tipo_producto=input("Ingrese tipo producto (seco - liquido - granos): ")
+tamano_producto=input("Ingrese tamaño en número- dimensiones - peso - litros : ")
+precio_producto=input("Ingrese precio del producto: ")
+mes_del_producto=input("Ingrese mes de la cosecha: ").title()
 
 #recolección de datos
-datos=(documento,nombres,apellidos,correo,metodo_pago,fecha_nacimiento,direccion,celular)
+datos=(nombre_producto,categoria_producto,caracteristicas_producto,tipo_producto,tamano_producto,precio_producto,mes_del_producto)
 
 #utilizar execute
 cursor.execute(sql,datos)

@@ -16,7 +16,7 @@ conexion = psycopg2.connect(
 cursor = conexion.cursor()
 
 # Consulta SQL
-sql = 'SELECT * FROM id_personas'
+sql = 'SELECT * FROM productos'
 
 # Ejecutar y obtener resultados
 cursor.execute(sql)
