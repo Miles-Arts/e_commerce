@@ -16,10 +16,10 @@ conexion = psycopg2.connect(
 cursor = conexion.cursor()
 
 #sentencia SQL
-sql='DELETE FROM productos WHERE id_producto=%s'
+sql='DELETE FROM cliente_vendedor WHERE id_venta=%s'
 
 #solicitar dato al user
-id_poducto=input("Ingrese ID del producto a eliminar: ").strip()
+id_poducto=input("Ingrese ID de la venta a eliminar: ").strip()
 
 #metodo execute
 cursor.execute(sql,id_poducto)

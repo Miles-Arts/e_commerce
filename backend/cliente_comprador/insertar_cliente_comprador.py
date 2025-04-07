@@ -16,20 +16,14 @@ conexion = psycopg2.connect(
 cursor = conexion.cursor()
 
 #Crear sentencia SQL
-sql='INSERT INTO productos(nombre_producto,categoria_producto,caracteristicas_producto,tipo_producto,tamano_producto,precio_producto,mes_del_producto) VALUES(%s,%s,%s,%s,%s,%s,%s)'
+sql='INSERT INTO cliente_comprador(id_compra,id_comprador) VALUES(%s,%s)'
 
 #Solicitud de datos al usuario
-#documento=input("Ingrese número de documento: ")
-nombre_producto=input("Ingrese nombre producto: ").title()
-categoria_producto=input("Ingrese categoría producto: ").title()
-caracteristicas_producto=input("Ingrese caracterisrticas producto: ")
-tipo_producto=input("Ingrese tipo producto (seco - liquido - granos): ")
-tamano_producto=input("Ingrese tamaño en número- dimensiones - peso - litros : ")
-precio_producto=input("Ingrese precio del producto: ")
-mes_del_producto=input("Ingrese mes de la cosecha: ").title()
+id_compra=input("Ingrese ID compra: ").title()
+Id_comprador=input("Ingrese ID comprador: ").title()
 
 #recolección de datos
-datos=(nombre_producto,categoria_producto,caracteristicas_producto,tipo_producto,tamano_producto,precio_producto,mes_del_producto)
+datos=(id_compra,Id_comprador)
 
 #utilizar execute
 cursor.execute(sql,datos)
