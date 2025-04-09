@@ -1,0 +1,5 @@
+"documento","nombres","apellidos","correo","metodo_de_pago","fecha_nacimiento","direccion","celular","id_persona"
+123456788,"Juan","Pérez","juan.perez@email.com",1,"14-04-1990","Calle 123 #45-67","3001234567",3
+1234567,"Anita","Pérez","anita.perez@email.com",1,"14-04-1990","Calle 124 #45-67","3201234567",4
+123,"Ana","Correa","casa@email.com",1,"12'10/1990","calle 123","1234321",5
+40908,"Carlota","Neira","neira@jobs.com",0,"20/05/1997","avenida 1 # 30","9090878",6
