@@ -73,34 +73,65 @@ class Ecommerce_Model():
 
         except Exception as ex:
             raise Exception(ex)
-        
-@classmethod
-def add_ecommerce(self, id_personas):
-    try:
-        connection = get_connection()
+            
+    @classmethod
+    def add_ecommerce(self, id_personas):
+        try:
+            connection = get_connection()
 
-        with connection.cursor() as cursor:
-            # Inserta los datos en la base de datos
-            cursor.execute("""
-                INSERT INTO id_personas (documento, nombres, apellidos, correo, metodo_de_pago, fecha_nacimiento, direccion, celular, id_persona)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-            """, (
-                id_personas.documento,
-                id_personas.nombres,
-                id_personas.apellidos,
-                id_personas.correo,
-                id_personas.metodo_de_pago,  # Booleano
-                id_personas.fecha_nacimiento,  # Fecha
-                id_personas.direccion,
-                id_personas.celular,
-                id_personas.id_persona
-            ))
+            with connection.cursor() as cursor:
+                # Inserta los datos en la base de datos
+                cursor.execute("""
+                    INSERT INTO id_personas (documento, nombres, apellidos, correo, metodo_de_pago, fecha_nacimiento, direccion, celular, id_persona)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                """, (
+                    id_personas.documento,
+                    id_personas.nombres,
+                    id_personas.apellidos,
+                    id_personas.correo,
+                    id_personas.metodo_de_pago,  # Booleano
+                    id_personas.fecha_nacimiento,  # Fecha
+                    id_personas.direccion,
+                    id_personas.celular,
+                    id_personas.id_persona
+                ))
 
-            affected_rows = cursor.rowcount
-            connection.commit()
+                affected_rows = cursor.rowcount
+                connection.commit()
 
-        connection.close()
-        return affected_rows
+            connection.close()
+            return affected_rows
 
-    except Exception as ex:
-        raise Exception(ex)
+        except Exception as ex:
+            raise Exception(ex)
+
+        # @classmethod
+    # def add_ecommerce(self, id_personas):
+    #     try:
+    #         connection = get_connection()
+
+    #         with connection.cursor() as cursor:
+    #             # Inserta los datos en la base de datos
+    #             cursor.execute("""
+    #                 INSERT INTO id_personas (documento, nombres, apellidos, correo, metodo_de_pago, fecha_nacimiento, direccion, celular, id_persona)
+    #                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+    #             """, (
+    #                 id_personas.documento,
+    #                 id_personas.nombres,
+    #                 id_personas.apellidos,
+    #                 id_personas.correo,
+    #                 id_personas.metodo_de_pago,
+    #                 id_personas.fecha_nacimiento,
+    #                 id_personas.direccion,
+    #                 id_personas.celular,
+    #                 id_personas.id_persona
+    #             ))
+
+    #             affected_rows = cursor.rowcount
+    #             connection.commit()
+
+    #         connection.close()
+    #         return affected_rows
+
+    #     except Exception as ex:
+    #         raise Exception(ex)
