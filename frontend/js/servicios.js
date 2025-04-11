@@ -3,24 +3,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const servicios = [
         {
             id: 1,
-            nombre: "Tour de caminatas por los Bosques en Boyacá",
-            descripcion: "Participa en nuestros tours guiados y experimenta la belleza y diversidad de los bosques.",
-            imagen: "avistamiento.jpg" 
+            nombre: "Tienda Online de Productos Agroindustriales",
+            descripcion: "Compra frutas, vegetales, lácteos y productos transformados directamente de productores locales a través de nuestra plataforma web.",
+            imagen: "tienda01.jpg"
         },
     
         {
             id: 2,
-            nombre: "Programas Educativos",
-            descripcion: "Involúcrate en nuestros programas educativos diseñados para todas las edades y aprende sobre la importancia de la biodiversidad arborea.",
-            imagen: "programas1.jpg"
+            nombre: "Pedidos Personalizados y Envío a Domicilio",
+            descripcion: "Selecciona tus productos favoritos y recíbelos en casa. Ofrecemos opciones personalizadas para pedidos semanales o por suscripción.",
+            imagen: "tienda02.jpg"
         },
         {
             id: 3,
-            nombre: "Conservación de árboles",
-            descripcion: "Aprende sobre nuestras iniciativas de conservación para proteger y preservar las especies bosques locales.",
-            imagen: "conservacion.jpg"
+            nombre: "Promoción del Comercio Local",
+            descripcion: "Apoya a los campesinos y productores agroindustriales de tu región comprando productos frescos y de calidad, directamente desde nuestra tienda virtual.",
+            imagen: "tienda03.jpg"
         }
     ];
+    
  
     const mostrarServicios = () => {
         const listServicios = document.getElementById('i-list-servicios');
