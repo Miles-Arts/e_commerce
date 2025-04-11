@@ -70,13 +70,13 @@
       <table id="i-table-arboles" class="table table-hover">
         <thead>
           <tr>              
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Tamaño</th>
-            <th scope="col">Color</th>
-            <th scope="col">Caracteristica</th>
-            <th scope="col">Comportamiento</th>
-            <th scope="col">Acciones</th>
+            <th scope="col">Nombre Producto:</th>
+            <th scope="col">Categoria Producto:</th>
+            <th scope="col">Caracteristicas Producto:</th>
+            <th scope="col">Tipo Producto:</th>
+            <th scope="col">Tamaño Producto:</th>
+            <th scope="col">Precio Producto:</th>
+            <th scope="col">Cosecha del Producto:</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -99,19 +99,26 @@
                 <input type="text" class="form-control" id="form-nombre" name="form-nombre" required>
               </div>
               <div class="col-md-6">
-                <label for="form-tamano" class="form-label">Tamaño:</label>
+                <label for="form-tamano" class="form-label">Categoria:</label>
                 <input type="number" class="form-control" id="form-tamano" name="form-tamano" required>
               </div>
               <div class="col-md-6">
-                <label for="form-color" class="form-label">Color:</label>
+                <label for="form-color" class="form-label">Caracteristica:</label>
                 <input type="text" class="form-control" id="form-color" name="form-color" required>
               </div>
               <div class="col-md-6">
-                <label for="form-caracteristica" class="form-label">Característica:</label>
+                <label for="form-caracteristica" class="form-label">Tipo:</label>
                 <input type="text" class="form-control" id="form-caracteristica" name="form-caracteristica" required>
               </div>
               <div class="col-md-6">
-                <label for="form-comportamiento" class="form-label">Comportamiento:</label>
+                <label for="form-comportamiento" class="form-label">Tamaño:</label>
+                <input type="text" class="form-control" id="form-comportamiento" name="form-comportamiento" required>
+              </div> <div class="col-md-6">
+                <label for="form-comportamiento" class="form-label">Precio:</label>
+                <input type="text" class="form-control" id="form-comportamiento" name="form-comportamiento" required>
+              </div>
+              <div class="col-md-6">
+                <label for="form-comportamiento" class="form-label">Cosecha:</label>
                 <input type="text" class="form-control" id="form-comportamiento" name="form-comportamiento" required>
               </div>
               <div class="col-md-12">
@@ -164,7 +171,7 @@
               
               <div class="card-body">
                 <h5 class="card-title" id="detalle-nombre"></h5>
-                <p class="card-text"> <strong>Tamaño:</strong> <span id="detalle-nombre"></span> </p>
+                <p class="card-text"> <strong>Nombre:</strong> <span id="detalle-nombre"></span> </p>
                 <p class="card-text"> <strong>Color:</strong> <span id="detalle-nombre"></span> </p>
                 <p class="card-text"> <strong>Caracteristica:</strong> <span id="detalle-nombre"></span> </p>
                 <p class="card-text"> <strong>Comportamiento:</strong> <span id="detalle-nombre"></span> </p>
