@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, request
 import uuid
+import random
 #entities
 from models.entities.Ecommerce import Ecommerce
 
@@ -22,16 +23,7 @@ def get_persona():
         return jsonify({'message':str(ex)}),500
 
 
-@main.route('/<id_persona>')
-def get_persona_by_id(id_persona):  # Cambié el nombre de la función
-    try:
-        ecommerce = Ecommerce_Model.get_ecommerce_by_id(id_persona)
-        if ecommerce is not None:
-            return jsonify(ecommerce)
-        else:
-            return jsonify({}), 404
-    except Exception as ex:
-        return jsonify({'message': str(ex)}), 500
+
     
 #-----------------
 @main.route('/add', methods=['POST'])
@@ -48,7 +40,7 @@ def add_persona_by_id():
         fecha_nacimiento = request.json['fecha_nacimiento']
         direccion = request.json['direccion']
         celular = int(request.json['celular'])
-        
+        # id_persona=request.json['id_persona']
         
         # Valida y convierte la fecha de nacimiento
         from utils.DateFormat import DateFormat
@@ -56,11 +48,11 @@ def add_persona_by_id():
 
         # Genera un UUID para el ID
         id = uuid.uuid4()
+        id = 10
 
         # Crea un objeto Ecommerce
         id_personas = Ecommerce(
-            str(id), documento, nombres, apellidos, correo, metodo_de_pago, fecha_nacimiento, direccion, celular
-        )
+             id, documento, nombres, apellidos, correo, metodo_de_pago, fecha_nacimiento, direccion, celular)
         
         # Crea un objeto Ecommerce
         #id_personas = Ecommerce(  documento, nombres, apellidos, correo, metodo_de_pago, fecha_nacimiento, direccion, celular)
@@ -76,4 +68,20 @@ def add_persona_by_id():
 
     except Exception as ex:
         return jsonify({'message': str(ex)}), 500
+    
+@main.route('/<id_persona>')
+def get_persona_by_id(id_persona):
+    try:
+        # Verifica que id_persona sea un número entero
+        if not id_persona.isdigit():
+            return jsonify({'message': 'id_persona debe ser un número entero'}), 400
+
+        ecommerce = Ecommerce_Model.get_ecommerce_by_id(int(id_persona))
+        if ecommerce is not None:
+            return jsonify(ecommerce)
+        else:
+            return jsonify({}), 404
+    except Exception as ex:
+        return jsonify({'message': str(ex)}), 500
+    
  #---------------------   
